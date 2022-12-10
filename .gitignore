@@ -1,1 +1,4 @@
 .vs/*
+PaymentContext.Domain/obj/*
+PaymentContext.Shared/obj/*
+PaymentContext.Tests/obj/*

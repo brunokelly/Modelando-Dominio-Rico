@@ -213,9 +213,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desenvolvimento\\Modelando Dominios Ricos\\ModelandoDominioRico\\ModelandoDominioRico\\ModelandoDominioRico.csproj",
-      "projectName": "ModelandoDominioRico",
-      "projectPath": "D:\\Desenvolvimento\\Modelando Dominios Ricos\\ModelandoDominioRico\\ModelandoDominioRico\\ModelandoDominioRico.csproj",
+      "projectUniqueName": "D:\\Desenvolvimento\\Modelando Dominios Ricos\\ModelandoDominioRico\\ModelandoDominioRico\\PaymentContext.csproj",
+      "projectName": "PaymentContext",
+      "projectPath": "D:\\Desenvolvimento\\Modelando Dominios Ricos\\ModelandoDominioRico\\ModelandoDominioRico\\PaymentContext.csproj",
       "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
       "outputPath": "D:\\Desenvolvimento\\Modelando Dominios Ricos\\ModelandoDominioRico\\ModelandoDominioRico\\obj\\",
       "projectStyle": "PackageReference",

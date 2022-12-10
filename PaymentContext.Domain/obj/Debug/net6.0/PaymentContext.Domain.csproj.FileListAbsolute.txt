@@ -1,0 +1,12 @@
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\bin\Debug\net6.0\PaymentContext.Domain.deps.json
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\bin\Debug\net6.0\PaymentContext.Domain.dll
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\bin\Debug\net6.0\PaymentContext.Domain.pdb
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.csproj.AssemblyReference.cache
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.AssemblyInfo.cs
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.dll
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\refint\PaymentContext.Domain.dll
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\PaymentContext.Domain.pdb
+D:\Desenvolvimento\Modelando Dominios Ricos\PaymentContext.Domain\obj\Debug\net6.0\ref\PaymentContext.Domain.dll

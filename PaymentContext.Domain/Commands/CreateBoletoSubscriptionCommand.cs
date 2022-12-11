@@ -33,7 +33,7 @@ namespace PaymentContext.Domain.Commands
         public string Country { get; set; }
         public string ZipCode { get; set; }
 
-        public void Validate()
+        public void Validate() 
         {
             AddNotifications(new Contract()
                 .Requires()

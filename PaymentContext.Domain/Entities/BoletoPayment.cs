@@ -9,6 +9,15 @@ namespace PaymentContext.Domain.Entities
 {
     public partial class BoletoPayment : Payment
     {
+        private DateTime paidDate;
+        private DateTime expireDate;
+        private decimal total;
+        private decimal totalPaid;
+        private string payer;
+        private Document document;
+        private Address address;
+        private Email email;
+
         public BoletoPayment(string barCode,
             string boletoNumber,
             string number,

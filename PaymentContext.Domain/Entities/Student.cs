@@ -1,31 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Flunt.Br;
+using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities
 {
-    public class Student
+    public class Student : Entity
     {
-        public Student(string firstName, string lastName, string email, string document, List<Subscription> subscription)
+        public Student(Name name, Email email, Document document)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            Name = name;
             Email = email;
             Document = document;
-            _subscription = subscription;
+            _subscription = new List<Subscription>();
+
+            AddNotifications(name, email, document);
         }
 
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Email { get; private set; }
-        public string Document { get; private set; }
-        public string Address { get; private set; }
+        public Name Name { get; private set; }
+        public Email Email { get; private set; }
+        public Document Document { get; private set; }
+        public Address Address { get; private set; }
         public IReadOnlyCollection<Subscription> Subscriptions
         {
             get
-            { 
+            {
                 return _subscription.ToArray();
             }
         }
@@ -33,12 +31,24 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
-            foreach(var sub in Subscriptions)
-            {
-                sub.Inactive();
-            }
+            var hasSubscriptionActive = false;
+            AnySubscriptionActive(hasSubscriptionActive);
 
-            _subscription.Add(subscription);
+            AddNotifications(new Contract()
+                 .Requires()
+                 .IsFalse(hasSubscriptionActive, "Subscription.Subscriptions", "Você já tem uma assinatura ativa")
+                 .AreNotEquals(0, subscription.Payments.Count, "Subscription.Subscriptions", "Esta assinatura não possui pagamentos"));
+
+            if (IsValid)
+                _subscription.Add(subscription);
+        }
+
+        private bool AnySubscriptionActive(bool hasSubscriptionActive)
+        {
+           if( _subscription.Any(sub => sub.Active))
+                hasSubscriptionActive = true;
+
+            return hasSubscriptionActive;
         }
     }
 }

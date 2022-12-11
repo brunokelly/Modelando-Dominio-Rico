@@ -15,10 +15,10 @@ namespace PaymentContext.Domain.Handlers
         private readonly IStudentRepository _repository;
         private readonly IEmailService _emailService;
 
-        public SubscriptionHandler(IStudentRepository repository)
+        public SubscriptionHandler(IStudentRepository repository, IEmailService emailService)
         {
             _repository = repository;
-
+            _emailService = emailService;
         }
 
         public ICommandResult Handle(CreateBoletoSubscriptionCommand command)

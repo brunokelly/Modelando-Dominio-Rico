@@ -12,7 +12,7 @@ namespace PaymentContext.Domain.Entities
     {
         private IList<Payment> _payments;
 
-        public Subscription(DateTime? expireDate, bool active, List<Payment> payments)
+        public Subscription(DateTime? expireDate)
         {
             CreateDate = DateTime.Now;
             LastUpdateDate = DateTime.Now;
@@ -25,7 +25,9 @@ namespace PaymentContext.Domain.Entities
         public DateTime LastUpdateDate { get; private set; }
         public DateTime? ExpireDate { get; private set; }
         public bool Active { get; private set; }
-        public IReadOnlyCollection<Payment> Payments { get; private set; }
+        public IReadOnlyCollection<Payment> Payments {
+            get { return _payments.ToArray(); }
+        }
     
         public void AddPayment(Payment payment)
         {
@@ -34,9 +36,6 @@ namespace PaymentContext.Domain.Entities
                 .IsGreaterThan(DateTime.Now,
                 payment.PaidDate, 
                 "Subscription.Payments", "A data do pagamento deve ser futura"));
-
-            if (!IsValid)
-                return;
 
             _payments.Add(payment);
         }

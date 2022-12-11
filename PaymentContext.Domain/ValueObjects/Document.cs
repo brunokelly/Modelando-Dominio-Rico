@@ -13,7 +13,7 @@ namespace PaymentContext.Domain.ValueObjects
 
             AddNotifications(new Contract()
                 .Requires()
-                .IsTrue(Validate(), "Document.Number", "Documento Invalido");
+                .IsTrue(Validate(), "Document.Number", "Documento Invalido"));
         }
 
         public string Number { get; private set; }
@@ -21,10 +21,10 @@ namespace PaymentContext.Domain.ValueObjects
 
         private bool Validate()
         {
-            if (Type == EDocumentType.CNPJ && Number.Length != 14)
+            if (Type == EDocumentType.CNPJ && Number.Length == 14)
                 return true;
 
-            if (Type == EDocumentType.CPF && Number.Length != 10)
+            if (Type == EDocumentType.CPF && Number.Length == 11)
                 return true;
 
             return false;
